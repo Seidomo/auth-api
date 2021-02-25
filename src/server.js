@@ -5,7 +5,7 @@ const express = require('express');
 const cors = require('cors');
 const morgan = require('morgan');
 ///se
-const v1Routes = require('./auth/routes.js');
+const v1Routes = require('./routes/v1.js');
 const logger = require('./auth/middleware/logger.js');
 
 // Esoteric Resources
