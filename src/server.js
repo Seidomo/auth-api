@@ -6,6 +6,7 @@ const cors = require('cors');
 const morgan = require('morgan');
 ///se
 const v1Routes = require('./routes/v1.js');
+const v2Routes = require('./routes/v2.js');
 const logger = require('./auth/middleware/logger.js');
 
 // Esoteric Resources
@@ -32,6 +33,7 @@ app.use(authRoutes);
 app.use(notFound);
 app.use(errorHandler);
  app.use('/api/v1', v1Routes);
+ app.use('/api/v2', v2Routes);
 
 module.exports = {
   server: app,
